@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark-gray: #707070;
+    --light-gray: #C9C9C9;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: var(--dark-gray);
+}
+
+ul li , ol li{
+    list-style-position: inside;
+}
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding: 21px 60px 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+header span{
+    font-size: 1em;
+}
+
+nav > ul{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 90px;
+    list-style: none;
+}
+
+nav > ul > li{
+    text-transform: capitalize;
+}
+
+/* Banner */
+.banner{
+    padding: 46px 0 49px;
+    margin-inline-start: 60px;
+    margin-inline-end: 60px;
+    background-color: var(--light-gray);
+    border: 1px solid var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.banner span{
+    font-size: 2.5em;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.banner p{
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+/* Content section */
+
+.content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-inline-start: 60px;
+    margin-top: 48px;
+}
+.content > article > span{
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--dark-gray);
+    display: flex;
+    width: 70%;
+    padding-bottom: 14px;
+    font-weight: bold;
+}
+
+.content > article p{
+    margin-top: 19px;
+    line-height: 30px;
+    width: 80%;
+}
+
+.content > article > div > ol{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    margin-inline-start: 82px;
+}
+
+.content > article .list-alpha{
+    list-style-type:lower-alpha
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+    margin-top: 42px;
+    background-color: var(--light-gray);
+    padding: 14px 0;
+    border: 1px solid var(--dark-gray);
+    font-weight: bold;
+}
+
+/* Media Query */
+@media screen and (max-width: 800px){
+    body{
+        font-size: 15px;
+    }
+
+    .banner span{
+        font-size: 2em;
+    }
+
+    .content > article > div > ol{
+        margin-inline-start: 30px;
+        row-gap: 5px;
+    }
+}
